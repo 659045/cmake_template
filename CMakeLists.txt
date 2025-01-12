@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 3.30)
-project(myproject)
+cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED YES)
-set(CMAKE_CXX_EXTENSIONS OFF)
+project(your_project C)
 
+add_executable(your_program main.c)
 
-add_executable(${PROJECT_NAME} main.cpp)
+# Platform-independent custom target
+add_custom_target(run
+    COMMAND ${CMAKE_COMMAND} --build . --target your_program
+    COMMAND ${CMAKE_BINARY_DIR}/your_program
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    DEPENDS your_program
+)
