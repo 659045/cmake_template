@@ -1,0 +1,3 @@
+/home/Archie/cryphon/cmake/cmake_template/build/CMakeFiles/myproject.dir
+/home/Archie/cryphon/cmake/cmake_template/build/CMakeFiles/edit_cache.dir
+/home/Archie/cryphon/cmake/cmake_template/build/CMakeFiles/rebuild_cache.dir
